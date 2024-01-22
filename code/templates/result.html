@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Prediction System</title>
+    <link rel="stylesheet" href='static/result.css'>
+    <link rel="stylesheet" href='static/navbar.css'>
+</head>
+<body>
+    <div class='navbar'>
+        <h2>Loan Approval Prediction System</h2>
+        <div class='list'>
+            <ul>
+                <li><a href='../'>Home</a></li>
+                
+                <li><a href='/form'>Check Eligibility</a></li>
+                
+            </ul>
+
+        </div>
+    </div>
+    <div class='body'>
+        {% if x==1 %}
+        <div class='yes'>
+            <img src='/static/success.gif' id='i1'>
+            <div class='data'>
+                <h2 style='margin-left:40px;margin-top:-50px;line-height:40px'>Congratualtions 🎉🎉🎉<br> Dear {{name}}!! <br> You are Eligible For The Loan 💰 </h2>
+                <button><a href='../'>Go to Home🏡</a></button>
+            </div>
+            <img src='/static/success.gif' id='i2'>
+        </div>
+        {% else %}
+        <div class='no'>
+            <img src='/static/fail.gif' id='i1'>
+            <div class='data' id='fail'>
+                <h2 style='margin-left:40px;margin-top:-50px;line-height:40px'>Oops!! 😞😞😞<br> Dear {{name}}!! <br> You are Not Eligible For The Loan 💰 </h2>
+                <button><a href='../'>Go to Home🏡</a></button>
+            </div>
+            <img src='/static/fail.gif' id='i2'>
+        </div>
+        {% endif %}
+
+    </div>
+</body>
+</html>

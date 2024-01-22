@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Prediction System</title>
+    <link rel="stylesheet" href='static/navbar.css'>
+    <link rel="stylesheet" href='static/form.css'>
+</head>
+<body>
+    <div class='navbar'>
+        <h2>Loan Approval Prediction System</h2>
+        <div class='list'>
+            <ul>
+                <li><a href='../'>Home</a></li>
+                
+                <li><a href='/form'>Check Eligibility</a></li>
+                
+            </ul>
+
+        </div>
+    </div>
+    <div class='body'>
+        <img src='/static/i4.png'>
+        <div class="form">
+            <h3>Applicant Details</h3>
+            <form method="post" action="{{url_for('form')}}">
+                <div class='i'>
+                    <span class='ii'><p>Loan ID<span id='red'>*</span></p></span>
+                    <input type='text' value=''  name='id'required/>
+                </div>
+                <div class='i'>
+                    <span class='ii' ><p>Applicant Name<span id='red'>*</span></p></span>
+                    <input type='text' value=''  name='name' required/>
+                </div>
+                <div class='i'>
+                    <span class='ii'><p>Gender<span id='red'>*</span></p></span>
+                    <select name='gender' required>
+                        <option value=''>select</option>
+                        <option value='1'>Male</option>
+                        <option value='0'>Female</option>
+                        <option value='0'>Others</option>
+                    </select>
+                </div>
+                <div class='i'>
+                    <span class='ii'><p>Marrital Status<span id='red'>*</span></p></span>
+                    <select name='married' required>
+                        <option value=''>select</option>
+                        <option value='1'>Married</option>
+                        <option value='0'>UnMarried</option>
+                    </select>
+                </div>
+                <div class='i'>
+                    <span class='ii'><p>Dependents<span id='red'>*</span></p></span>
+                    <input type='number' value=''  name='dependents' required />
+                </div>
+                <div class='i'>
+                    <span class='ii'><p>Education<span id='red'>*</span></p></span>
+                    <select name='education' required>
+                        <option value=''>select</option>
+                        <option value='1'>Graduate</option>
+                        <option value='0'>Not Graduate</option>
+                    </select>
+                </div>
+                <div class='i'>
+                    <span class='ii'><p>Self Employed<span id='red'>*</span></p></span>
+                    <select name='semployed' required>
+                        <option value=''>select</option>
+                        <option value='1'>Yes</option>
+                        <option value='0'>No</option>
+                    </select>
+                </div>
+                <div class='i'>
+                    <span class='ii'><p>Applicant Income<span id='red'>*</span></p></span>
+                    <input type='number' value=''  name='aincome' required/>
+                </div>
+                <div class='i'>
+                    <span class='ii'><p>Co-Applicant Income<span id='red'>*</span></p></span>
+                    <input type='number' value=''  name='coincome' required/>
+                </div>
+                <div class='i'>
+                    <span class='ii'><p>Loan Amount<span id='red'>*</span></p></span>
+                    <input type='number' value=''  name='lamount' required/>
+                </div>
+                <div class='i'>
+                    <span class='ii'><p>Loan Amount Term<span id='red'>*</span></p></span>
+                    <input type='number' value=''  name='lterm' required/>
+                </div>
+                <div class='i'>
+                    <span class='ii'><p>Credit History<span id='red'>*</span></p></span>
+                    <select name='chistory' required>
+                        <option value=''>select</option>
+                        <option value='1'>Yes</option>
+                        <option value='0'>No</option>
+                        
+                    </select>
+                </div>
+                <div class='i'>
+                    <span class='ii'><p>Property Area<span id='red'>*</span></p></span>
+                    <select name='parea' required>
+                        <option value=''>select</option>
+                        <option value='rural'>Rural</option>
+                        <option value='urban'>Urban</option>
+                        <option value='semiurban'>Semi Urban</option>
+                    </select>
+                </div>
+                <div class='i' id='buts'>
+                    <input type='submit' value='Check Eligibility'/>
+                    <input type='reset' value='Reset'/>
+                </div>
+    
+            </form>
+        </div>
+        <img src='/static/i3.avif' id='i3'>
+    </div>
+</body>
+</html>

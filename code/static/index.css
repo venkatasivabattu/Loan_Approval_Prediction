@@ -1,0 +1,68 @@
+
+.body .data{
+    width: fit-content;
+    height: 100%;
+    overflow-y:scroll;
+    padding: 30px;
+    padding-top: 50px;
+
+}
+.body .data button{
+    background-color: rgba(8, 107, 205, 0.812);
+    padding:5px 15px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 1px 1px black;
+}
+.body .data button a{
+    color: #fff;
+    text-decoration: none;
+}
+.body .data button:hover{
+    background-color: rgb(8, 106, 205);;
+    box-shadow: 2px 3px 3px black;
+}
+
+.body .pic{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    position: fixed;
+    margin-left: 50%;
+}
+.body .pic img{
+   margin-left:0px;
+   margin-top: 6%;
+}
+h1{
+    color: rgb(8, 106, 205);;
+}
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
